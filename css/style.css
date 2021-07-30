@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  color: #333;
+  color: #222328;
 }
 
 .wrapper {
@@ -17,39 +17,32 @@
 header {
   width: 100%;
   height: 100px;
-  position: relative;
-}
-
-header > div {
-  float: left;
-  height: 100px;
 }
 
 .h_logo {
-  width: 200px;
-  padding-top: 50px;
+  float: left;
 }
 
 .menu {
+  float: right;
   width: 800px;
   height: 50px;
-  float: right;
-  top: 50px;
   right: 50px;
-  z-index:999;
-  position: absolute;
+  top: 50px;
+  z-index: 999;
+  position: relative;
 }
 
 .main_menu {
   width: 100%;
   height: 50px;
-  background-color: #3cb149;
+  background-color: #ddd;
 }
 
 .main_menu ul li {
+  float: left;
   width: 25%;
   height: 100%;
-  float: left;
 }
 
 .main_menu ul li a {
@@ -61,50 +54,47 @@ header > div {
 }
 
 .main_menu ul li a:hover {
-  background-color: #2b8a36;
+  background-color: #000;
+  color: #fff;
 }
 
 .sub_menu {
-  width: 1200px;
-  height: 100px;
-  margin-left: -350px;
-  background-color: #1d8844;
   display: none;
-}
-
-.sub_menu div {
-  float: right;
-  margin-right: 50px;
-  width: 800px;
+  width: 100%;
+  height: 120px;
+  /* position: absolute; */
+  /* background-color: #000; */
 }
 
 .sub_menu ul li {
+  float: left;
   width: 25%;
   height: 30px;
-  float: left;
 }
 
 .sub_menu ul li ul li {
   width: 100%;
-  height: 30px;
+  height: 100%;
+  /* text-align: center; */
+  background-color: #000;
 }
 
 .sub_menu ul li ul li a {
+  display: block;
   width: 100%;
-  height: 30px;
   line-height: 30px;
   text-align: center;
-  display: block;
+  color: #fff;
 }
 
 .sub_menu ul li ul li a:hover {
-  background-color: #00f31c;
+  background-color: #fff;
+  color: #000;
 }
 
 .slide {
   width: 100%;
   height: 300px;
-  z-index: 0;
   overflow: hidden;
   position: relative;
 }
@@ -112,132 +102,190 @@ header > div {
 .slide img {
   width: 100%;
   height: 100%;
+  top: 100%;
   position: absolute;
+  z-index: 0;
 }
 
-.notice {
+.slide > img:first-child {
+  top: 0;
+}
+
+.contents {
   width: 100%;
   height: 200px;
 }
 
-.notice > div {
+.contents > div {
   float: left;
   width: 400px;
   height: 200px;
-  padding-top: 10px;
+  overflow: hidden;
 }
 
-.tab {
-  width: 80px;
-  height: 30px;
-  border: 1px solid black;
-  border-bottom: 0;
-  text-align: center;
-  line-height: 30px;
-  margin-left: 20px;
-}
-
-.box {
+.tabs {
   width: 100%;
-  height: 160px;
-  border: 1px solid #000;
-  margin-top: -1px;
+  height: 50px;
 }
 
-.notice ul li {
+.tabs > div {
   float: left;
-  height: 35px;
-  line-height: 35px;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #888;
+}
+
+.tabs .tab_news {
+  background-color: #fff;
+  border-bottom: 0;
+}
+
+.tabs .tab_gal {
+  border-left: 0;
+}
+
+.news, .gallery {
+  margin-top: -1px;
+  width: 100%;
+  height: 130px;
+  border: 1px solid #000;
+  padding-left: 5px;
+}
+
+.news ul li {
+  float: left;
+  height: 30px;
+  line-height: 30px;
   border-bottom: 1px solid #000;
 }
 
-.notice .box {
-  padding: 5px;
-}
-
-.notice ul li:first-child {
+.news ul li:first-child {
   width: 250px;
+  padding-left: 5px;
 }
 
-.notice ul li:last-child {
-  width: 120px;
+.news ul li:last-child {
+  text-align: right;
+  width: 130px;
 }
 
-.gallery .box {
+.gallery {
+  display: none;
   text-align: center;
-  padding-top: 20px;
 }
 
-.banner a {
+.gallery > img {
+  padding: 20px 0 0 20px;
+}
+
+.banner {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.links a {
   display: block;
-  width: 380px;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  margin-right: 5px;
-  background-color: #3cb149;
-  color: #fff;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
   border-radius: 5px;
-  margin: 15px 0 0 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.links a:first-child {
+  margin-top: 5px;
 }
 
 footer {
+  display: flex;
   width: 100%;
   height: 100px;
-  background-color: #a8ebaf;
 }
 
 footer > div {
-  float: left;
-  height: 100px;
-  padding-right: 10px;
+  justify-content: space-between;
 }
 
 .f_logo {
   width: 200px;
-  padding-top: 20px;
+  height: 100%;
+  text-align: center;
 }
 
 .copy {
   width: 700px;
-  text-align: center;
   line-height: 100px;
+  text-align: center;
 }
 
-.site {
+.sns {
   width: 300px;
-  padding: 20px;
-  text-align: right;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
 }
 
-#pop {
-  display: none;
+.sns a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.facebook{
+  background-color: #1240ff;
+  color: #fff;
+}
+
+.instagram{
+  background-color: #ff3b00;
+  color: #fff;
+}
+
+.twitter{
+  background-color: #89bbff;
+  color: #fff;
+}
+
+.pop {
   width: 500px;
   height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   border: 1px solid #000;
   background-color: #fff;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
-#pop p {
-  font-size: 1.2em;
-  padding: 20px;
+.pop p {
+  font-size: 20px;
+  padding: 0 20px;
 }
 
 .exit {
   position: fixed;
+  width: 80px;
+  height: 40px;
   bottom: 20px;
   right: 20px;
 }
 
-.title {
+.pop .title {
   padding-left: 20px;
   width: 100%;
   height: 50px;
-  line-height: 50px;
   border-bottom: 1px solid #000;
+  line-height: 50px;
+  font-size: 20px;
   font-weight: bolder;
 }
